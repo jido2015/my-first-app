@@ -1,40 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-servers',
-  templateUrl: './servers.component.html',
-  styleUrls: ['./servers.component.css']
+  selector: 'app-servers', templateUrl: './servers.component.html', styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
 
-  allowNewServer = false;
-  serverCreationStatus = 'No server created';
-  serverName = 'Testserver';
-  serverWasCreated = false;
-  servers = ['TestServer', 'TestServer2'];
-  detailsArray = [];
-  details;
+  showSecret = false;
+  counter = [];
 
   constructor() {
-        setTimeout(() => {
-      this.allowNewServer = true;
-    }, 2000);
   }
 
   ngOnInit() {
   }
 
-/*  onCreateServer() {
-    this.serverWasCreated = true;
-    this.servers.push(this.serverName);
-    this.serverCreationStatus = 'Server was created ' + this.serverName;
-    console.log(this.servers);
-  }*/
-
   displayDetails() {
-    this.details = new Date().getSeconds();
-    this.detailsArray.push(this.details);
+    this.showSecret = true;
+    this.counter.push(new Date().getSeconds());
 
-    console.log(this.details);
+    console.log(this.counter);
   }
 }
