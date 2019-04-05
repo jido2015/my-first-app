@@ -17,4 +17,6 @@ export class RecipeListComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Loop through recipes
+
 }
