@@ -5,5 +5,15 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  oddNumbers: number [] = [];
+  evenNumbers: number[] = [];
+
+  onValueChange(values: number) {
+    if ( values % 2 === 0) {
+      this.evenNumbers.push(values);
+    } else {
+      this.oddNumbers.push(values);
+    }
+  }
 }
 
