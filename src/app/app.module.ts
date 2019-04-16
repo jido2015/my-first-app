@@ -11,10 +11,6 @@ import { ShoppingEditComponent } from './header/shopping-list/shopping-edit/shop
 import { RecipeDetailsComponent } from './header/recipes/recipe-details/recipe-details.component';
 import { RecipeListComponent } from './header/recipes/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './header/recipes/recipe-list/recipe-item/recipe-item.component';
-import { GameControlComponent } from './game-control/game-control.component';
-import { OddComponent } from './odd/odd.component';
-import { EvenComponent } from './even/even.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +21,6 @@ import { EvenComponent } from './even/even.component';
     RecipeDetailsComponent,
     RecipeListComponent,
     RecipeItemComponent,
-    GameControlComponent,
-    OddComponent,
-    EvenComponent,
 
   ],
   imports: [
