@@ -1,39 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
-import { RecipesComponent } from './header/recipes/recipes.component';
-import { ShoppingListComponent } from './header/shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './header/shopping-list/shopping-edit/shopping-edit.component';
-import { RecipeDetailsComponent } from './header/recipes/recipe-details/recipe-details.component';
-import { RecipeListComponent } from './header/recipes/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './header/recipes/recipe-list/recipe-item/recipe-item.component';
-import {DropdownDirective} from './header/shared/dropdown.directive';
+import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     RecipesComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    RecipeDetailsComponent,
-    RecipeListComponent,
-    RecipeItemComponent,
-    DropdownDirective,
-
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule
   ],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
